@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+  - "10.12.0"
+
+env:
+  global:
+    - GIT_TAG=v$(date -u "+%Y-%m-%d-%H-%M-%S")-$TRAVIS_BUILD_NUMBER
+
+sudo: required
+dist: trusty
+
+services:
+  - docker
+
+before_install:
+  - npm ci
+
+before_script:
+  - sudo service postgresql stop
+  - while sudo lsof -Pi :5432 -sTCP:LISTEN -t; do sleep 1; done
+  - docker-compose up --build -d
+  - sleep 10
+
+script:
+  - npm run coverage
+
+deploy:
+  provider: script
+  on:
+    type: push
+  script: bash scripts/tag.sh
