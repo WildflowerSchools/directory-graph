@@ -13,7 +13,6 @@ exports.typeDefs = `
     roles: [SchoolAssignmentRole!] @beehiveRelation(target_type_name: "SchoolAssignmentRole", target_field_name: "person")
   }
 
-
   input PersonInput {
     name: String
     location: ID
@@ -33,6 +32,7 @@ exports.typeDefs = `
     STUDENT
     TEACHER
     ADMINISTRATOR
+    BOARD_MEMBER
     SUPPORT
   }
 

@@ -38,11 +38,12 @@ exports.typeDefs = `
   }
 
   enum SchoolState {
-    IN_PROGRESS
+    # School in any phase of the startup journey
+    IN_STARTUP_JOURNEY
+    # School has "graduated" from the startup journey and has opened
     OPEN
+    # School has closed their doors and no longer accepting students or the school has left the Wildflower Network of schools
     CLOSED
-    LEFT_NETWORK
-    INACTIVE
   }
 
 `;
