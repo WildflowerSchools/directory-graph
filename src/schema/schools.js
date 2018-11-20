@@ -33,12 +33,12 @@ exports.typeDefs = `
   input SchoolInput {
     name: String
     description: String
-    location: String
+    location: ID
     state: SchoolState!
   }
 
   enum SchoolState {
-    # School in any phase of the startup journey
+    # School in any phase of the startup journey prior to opening
     IN_STARTUP_JOURNEY
     # School has "graduated" from the startup journey and has opened
     OPEN
