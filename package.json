@@ -4,8 +4,7 @@
     "description": "wildflower directory service",
     "main": "src/index.js",
     "scripts": {
-        "local-fixtures": "docker-compose run honeycomb-service node src/local-fixtures.js",
-        "test": "docker-compose run honeycomb-service /app/node_modules/.bin/mocha src/**/*.spec.js",
+        "test": "docker-compose run directory /app/node_modules/.bin/mocha src/**/*.spec.js",
         "coverage": "node_modules/.bin/nyc --reporter=html npm test && open coverage/index.html",
         "start": "ENVIRONMENT=local node_modules/.bin/nodemon src/index.js"
     },
