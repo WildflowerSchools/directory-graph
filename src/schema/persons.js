@@ -47,8 +47,6 @@ exports.typeDefs = `
     # Gender
     gender: Gender
     gender_other: String
-    # TL Journey
-    tl_journey: TLJourney @beehiveRelation(target_type_name: "TLJourney")
   }
   
   type SchoolAssignmentRole @beehiveTable(table_name: "sa_roles", pk_column: "sa_role_id") {
@@ -80,7 +78,6 @@ exports.typeDefs = `
     FACEBOOK
     YOUTUBE
     INSTAGRAM
-    GOOGLE_PLUS
     QUORA
     FOURSQUARE
   }
@@ -88,6 +85,13 @@ exports.typeDefs = `
   type Website @beehiveTable(table_name: "websites", pk_column: "website_id") {
     website_id: ID!
     url: String
+    type: WebsiteType!
+  }
+  
+  enum WebsiteType {
+    HOME
+    WORK
+    OTHER
   }
   
   type PhoneNumber @beehiveTable(table_name: "phone_numbers", pk_column: "phone_number_id") {

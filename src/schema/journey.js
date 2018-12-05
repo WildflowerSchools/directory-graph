@@ -3,10 +3,12 @@ exports.typeDefs = `
     # teacher leader
     teacher: Person! @beehiveRelation(target_type_name: "Person")
     # current state within the TL Journey
-    stage: [TLJourneyStage!] @beehiveRelation(target_type_name: "TLJourneyStage")
+    stages: [TLJourneyStage!] @beehiveRelation(target_type_name: "TLJourneyStage")
     # TLJourney Checklist
     # checklist: [TLJourneyChecklist!]
-    state: JourneyState
+    # current state of teacher in School Journey
+    state: JourneyState!
+    # reason teacher is in specific JourneyState
     state_reason: String
   }
   
@@ -27,7 +29,7 @@ exports.typeDefs = `
   enum JourneyState {
     ACTIVE
     COMPLETE
-    PAUSE
+    PAUSED
     ABANDONED
   }
   
@@ -48,9 +50,11 @@ exports.typeDefs = `
     school: School! @beehiveRelation(target_type_name: "School")
     # teacher leaders
     teachers: [Person!] @beehiveRelation(target_type_name: "Person")
-    # current state within the School Journey
-    stage: [SchoolJourneyStage!] @beehiveRelation(target_type_name: "SchoolJourneyStage")
-    state: JourneyState
+    # current stage within the School Journey
+    stages: [SchoolJourneyStage!] @beehiveRelation(target_type_name: "SchoolJourneyStage")
+    # current state of school in School Journey
+    state: JourneyState!
+    # reason school is in specific JourneyState
     state_reason: String
   }
   
@@ -84,4 +88,3 @@ exports.typeDefs = `
 //  - pause for advice and sign agreement(s)
 
 // startup - get funds, find location, sign leases, get systems, open bank account, get insurance
-
