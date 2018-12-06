@@ -4,8 +4,9 @@
     "description": "wildflower directory service",
     "main": "src/index.js",
     "scripts": {
-        "test": "docker-compose run dirgraph /app/node_modules/.bin/mocha src/**/*.spec.js",
-        "coverage": "node_modules/.bin/nyc --reporter=html npm test && open coverage/index.html",
+        "test-in-docker": "docker-compose run dirgraph npm test",
+        "test": "node_modules/.bin/mocha src/**/*.spec.js",
+        "coverage": "node_modules/.bin/nyc --reporter=html npm run test-in-docker",
         "start": "ENVIRONMENT=local node_modules/.bin/nodemon src/index.js"
     },
     "nyc": {
