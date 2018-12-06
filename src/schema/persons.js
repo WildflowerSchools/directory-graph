@@ -130,6 +130,7 @@ exports.typeDefs = `
     ASSISTANTS_TO_INFANCY
     PRIMARY
     ELEMENTARY
+    ADOLESCENT
   }
   
   enum RaceEthnicity {
