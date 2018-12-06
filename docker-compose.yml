@@ -9,7 +9,7 @@ services:
       POSTGRES_USER: directory_user
       POSTGRES_DB: directory
 
-  directory:
+  dirgraph:
     build:
       context: ./build
       dockerfile: local/Dockerfile
