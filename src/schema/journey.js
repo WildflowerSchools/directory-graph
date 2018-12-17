@@ -54,8 +54,6 @@ exports.typeDefs = `
     stages: [SchoolJourneyStage!] @beehiveRelation(target_type_name: "SchoolJourneyStage")
     # current state of school in School Journey
     state: JourneyState!
-    # reason school is in specific JourneyState
-    state_reason: String
   }
   
   type SchoolJourneyStage @beehiveTable(table_name: "school_journey_stages", pk_column: "school_journey_stage_id") {
