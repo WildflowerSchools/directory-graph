@@ -71,7 +71,7 @@ exports.typeDefs = `
     OPEN
   }
   
-`;
+`
 
 // exploration - who, what, why
 

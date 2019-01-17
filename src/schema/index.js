@@ -1,10 +1,12 @@
-const addresses = require("./addresses");
-const journey = require( "./journey");
-const schools = require("./schools");
-const persons = require("./persons");
-const {makeExecutableSchema} = require('graphql-tools');
-const {BeehiveDirectives, BeehiveTypeDefs} = require("@wildflowerschools/graphql-beehive");
-
+const addresses = require("./addresses")
+const journey = require("./journey")
+const schools = require("./schools")
+const persons = require("./persons")
+const { makeExecutableSchema } = require("graphql-tools")
+const {
+  BeehiveDirectives,
+  BeehiveTypeDefs
+} = require("@wildflowerschools/graphql-beehive")
 
 const rootDefs = `
   type Query {
@@ -20,10 +22,10 @@ const rootDefs = `
     query: Query
     mutation: Mutation
   }
-`;
+`
 
-const logger = { log: e => console.log(e) };
-  
+const logger = { log: e => console.log(e) }
+
 const schema = makeExecutableSchema({
   typeDefs: [
     rootDefs,
@@ -31,13 +33,13 @@ const schema = makeExecutableSchema({
     addresses.typeDefs,
     journey.typeDefs,
     schools.typeDefs,
-    persons.typeDefs,
+    persons.typeDefs
   ],
   schemaDirectives: BeehiveDirectives,
   resolverValidationOptions: {
     requireResolversForResolveType: false
   },
-  logger: logger,
-});
+  logger: logger
+})
 
-exports.schema = schema;
+exports.schema = schema

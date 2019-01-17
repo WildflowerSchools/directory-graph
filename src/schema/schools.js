@@ -35,5 +35,4 @@ exports.typeDefs = `
     # School has closed their doors and no longer accepting students or the school has left the Wildflower Network of schools
     CLOSED
   }
-
-`;
+`

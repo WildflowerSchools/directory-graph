@@ -10,4 +10,4 @@ exports.typeDefs = `
     postal_code: String
     country: String!
   }
-`;
+`

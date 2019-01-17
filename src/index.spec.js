@@ -1,6 +1,3 @@
-before(async function() {
-});
+before(async function() {})
 
-
-after(async function() {
-});
+after(async function() {})

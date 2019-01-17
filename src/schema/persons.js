@@ -194,4 +194,4 @@ exports.typeDefs = `
     NON_BINARY
     OTHER  # A not-listed or more specific gender
   }
-`;
+`
