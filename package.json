@@ -20,26 +20,26 @@
     "dependencies": {
         "@wildflowerschools/graphql-beehive": "^0.5.9",
         "apollo": "^1.9.2",
-        "apollo-server": "^2.1.0",
-        "apollo-server-express": "^2.1.0",
+        "apollo-server": "^2.4.8",
+        "apollo-server-express": "^2.4.8",
         "body-parser": "^1.18.3",
-        "event-stream": "^3.3.4",
+        "event-stream": "^3.3.5",
         "express": "^4.16.4",
-        "graphql": "^14.0.2",
+        "graphql": "^14.1.1",
         "graphql-custom-types": "^1.4.0",
         "graphql-directive": "^0.2.1",
         "graphql-iso-date": "^3.6.1",
-        "graphql-tools": "^4.0.1",
+        "graphql-tools": "^4.0.4",
         "graphql-voyager": "^1.0.0-rc.26",
-        "js-base64": "^2.4.9",
-        "pg": "^7.5.0"
+        "js-base64": "^2.5.1",
+        "pg": "^7.8.1"
     },
     "devDependencies": {
-        "npm": "^6.4.1",
         "chai": "^4.2.0",
         "mocha": "^5.2.0",
-        "nodemon": "^1.18.4",
-        "nyc": "^13.1.0",
-        "prettier": "^1.15.3"
+        "nodemon": "^1.18.10",
+        "npm": "^6.8.0",
+        "nyc": "^13.3.0",
+        "prettier": "^1.16.4"
     }
 }

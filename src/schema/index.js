@@ -11,11 +11,13 @@ const {
 const rootDefs = `
   type Query {
     schools(envId: String, page: PaginationInput): SchoolList! @beehiveList(target_type_name: "School")
+    people(envId: String, page: PaginationInput): PersonList! @beehiveList(target_type_name: "Person")
   }
 
   type Mutation {
     # adds a new device to the graph
     createSchool(school: SchoolInput): School @beehiveCreate(target_type_name: "School")
+    createPerson(person: PersonInput): Person @beehiveCreate(target_type_name: "Person")
   }
 
   schema @beehive(schema_name: "directory") {

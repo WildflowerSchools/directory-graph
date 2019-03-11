@@ -49,6 +49,10 @@ exports.typeDefs = `
     gender_other: String
   }
   
+  type PersonList {
+    data: [Person!]
+  }
+  
   type SchoolAssignmentRole @beehiveTable(table_name: "sa_roles", pk_column: "sa_role_id") {
     sa_role_id: ID!
     type: SchoolAssignmentRoleType!
