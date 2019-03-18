@@ -12,22 +12,12 @@ exports.typeDefs = `
     location: Address @beehiveRelation(target_type_name: "Address")
     # current state of the school
     state: SchoolState!
+    # School Journey
+    school_journey: SchoolJourney @beehiveRelation(target_type_name: "SchoolJourney")
   }
 
   type SchoolList {
     data: [School!]
-  }
-
-  type Address @beehiveTable(table_name: "addresses", pk_column: "address_id") {
-    # Internal identifier for the address
-    address_id: ID!
-    line_1: String
-    line_2: String
-    line_3: String
-    city: String!
-    state: String
-    postal_code: String
-    country: String!
   }
   
   input SchoolInput {
@@ -45,5 +35,4 @@ exports.typeDefs = `
     # School has closed their doors and no longer accepting students or the school has left the Wildflower Network of schools
     CLOSED
   }
-
-`;
+`
