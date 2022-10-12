@@ -20,7 +20,7 @@
     "dependencies": {
         "@wildflowerschools/graphql-beehive": "^0.5.9",
         "apollo": "^1.9.2",
-        "apollo-server": "^2.4.8",
+        "apollo-server": "^2.25.4",
         "apollo-server-express": "^2.4.8",
         "body-parser": "^1.18.3",
         "event-stream": "^3.3.5",
