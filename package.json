@@ -24,7 +24,7 @@
         "apollo-server-express": "^2.4.8",
         "body-parser": "^1.18.3",
         "event-stream": "^3.3.5",
-        "express": "^4.16.4",
+        "express": "^4.17.3",
         "graphql": "^14.1.1",
         "graphql-custom-types": "^1.4.0",
         "graphql-directive": "^0.2.1",
