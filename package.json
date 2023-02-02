@@ -19,7 +19,7 @@
     "license": "MIT",
     "dependencies": {
         "@wildflowerschools/graphql-beehive": "^0.5.9",
-        "apollo": "^1.9.2",
+        "apollo": "^2.34.0",
         "apollo-server": "^2.4.8",
         "apollo-server-express": "^2.4.8",
         "body-parser": "^1.18.3",
@@ -38,7 +38,7 @@
         "chai": "^4.2.0",
         "mocha": "^5.2.0",
         "nodemon": "^1.18.10",
-        "npm": "^6.8.0",
+        "npm": "^9.4.0",
         "nyc": "^13.3.0",
         "prettier": "^1.16.4"
     }
